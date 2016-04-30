@@ -1,0 +1,503 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ti",
+				"title-align-center"
+			],
+			[
+				"s",
+				"s"
+			],
+			[
+				"full",
+				"full_name"
+			],
+			[
+				"Si",
+				"SignUpForm"
+			],
+			[
+				"Signu",
+				"SignUp"
+			],
+			[
+				"Sign",
+				"SignUpAdmin"
+			],
+			[
+				"fixed",
+				"fixedText"
+			],
+			[
+				"fix",
+				"fixedText"
+			],
+			[
+				"find",
+				"find_element_by_name"
+			],
+			[
+				"cel",
+				"cell"
+			],
+			[
+				"cell",
+				"cell_list"
+			],
+			[
+				"board",
+				"boardNum"
+			],
+			[
+				"googl",
+				"googlecrawler"
+			],
+			[
+				"go",
+				"good_code"
+			],
+			[
+				"exam",
+				"examHwGrades"
+			],
+			[
+				"find_",
+				"find_elements_by_class_name"
+			],
+			[
+				"f",
+				"find_element_by_id"
+			],
+			[
+				"class",
+				"classNumber"
+			],
+			[
+				"clas",
+				"classNumber"
+			],
+			[
+				"E",
+				"enrollTotal"
+			],
+			[
+				"fin",
+				"firstEnrollTotal"
+			],
+			[
+				"fi",
+				"fixedEnrollTotal"
+			],
+			[
+				"e",
+				"EnrollCap"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/newsletter/views.py",
+			"settings":
+			{
+				"buffer_size": 2130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/home.html",
+			"settings":
+			{
+				"buffer_size": 2147,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/trydjango18/settings/__init__.py",
+			"settings":
+			{
+				"buffer_size": 111,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/trydjango18/settings/production.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/trydjango18/settings/base.py",
+			"settings":
+			{
+				"buffer_size": 3615,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/trydjango18/settings/local.py",
+			"settings":
+			{
+				"buffer_size": 3619,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Rishub/Desktop/trydjango18/static_in_env/static_root/css/navbar-static-top.css",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/about.html",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/example_fluid.html",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/navbar.html",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/base.html",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/home.html",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/head_css.html",
+		"/Users/Rishub/Desktop/trydjango18/src/static_in_pro/our_static/css/navbar-static-top.css",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/javascript.html",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/registration/registration_form.html",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/registration/login.html",
+		"/Users/Rishub/Desktop/trydjango18/src/trydjango18/settings.py",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/forms.html",
+		"/Users/Rishub/Desktop/trydjango18/src/newsletter/views.py",
+		"/Users/Rishub/Desktop/trydjango18/src/trydjango18/urls.py",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/registration/activation_email_subject.txt",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/registration/activation_email.txt",
+		"/Users/Rishub/Desktop/trydjango18/src/templates/registration/activation_complete.html",
+		"/Users/Rishub/Desktop/trydjango18/src/trydjango18/views.py",
+		"/Users/Rishub/Desktop/trydjango18/src/static_in_pro/our_static/css/custom.css",
+		"/Users/Rishub/Desktop/trydjango18/src/newsletter/forms.py",
+		"/Users/Rishub/Desktop/trydjango18/src/newsletter/admin.py",
+		"/Users/Rishub/Desktop/trydjango18/src/newsletter/models.py",
+		"/Users/Rishub/Desktop/trydjango18/static_in_env/static_root",
+		"/Users/Rishub/Desktop/trydjango18/src/static_in_pro/our_static/img/example.txt",
+		"/Users/Rishub/Desktop/trydjango18/src/newsletter/templates/home.html",
+		"/Users/Rishub/Desktop/Python/APM/seleniumSheets.py",
+		"/Users/Rishub/Desktop/Python/APM/summary.py",
+		"/Users/Rishub/Downloads/startbootstrap-agency-1.0.4/font-awesome/css/font-awesome.min.css",
+		"/Users/Rishub/Downloads/startbootstrap-agency-1.0.4/font-awesome/css/font-awesome.css",
+		"/Users/Rishub/Desktop/Python/BeautifulSoup/phone.py",
+		"/Users/Rishub/Desktop/APM/summary.py",
+		"/Users/Rishub/Desktop/APM/settings.py",
+		"/Users/Rishub/Desktop/APM/lol.py",
+		"/Users/Rishub/Desktop/APM/selenium.py",
+		"/Users/Rishub/Desktop/APM/seleniumMultiple.py",
+		"/Users/Rishub/Desktop/Python/BeautifulSoup/bs4.py",
+		"/Users/Rishub/Desktop/Python/BeautifulSoup/classScanner.py",
+		"/Users/Rishub/Desktop/Python/BeautifulSoup/rishubTest.py",
+		"/Users/Rishub/Desktop/APM/beautifulSoup.py",
+		"/Users/Rishub/Desktop/python/monkeykeyboard.py",
+		"/Users/Rishub/Desktop/Python/myucla.py"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"print",
+			"Built",
+			"Welcome",
+			"datetime",
+			"print",
+			"any",
+			"sleep",
+			"Index",
+			"print",
+			"#content",
+			"import",
+			"sleep",
+			"power",
+			"crs"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/newsletter/views.py",
+					"settings":
+					{
+						"buffer_size": 2130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1015,
+								1015
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 259.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/templates/home.html",
+					"settings":
+					{
+						"buffer_size": 2147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1246,
+								1161
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/trydjango18/settings/__init__.py",
+					"settings":
+					{
+						"buffer_size": 111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/trydjango18/settings/production.py",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/trydjango18/settings/base.py",
+					"settings":
+					{
+						"buffer_size": 3615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								611,
+								611
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/trydjango18/settings/local.py",
+					"settings":
+					{
+						"buffer_size": 3619,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								856,
+								856
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 25.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true
+}

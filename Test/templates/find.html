@@ -48,10 +48,14 @@
     <div>
     <div>
 
-        <p>{{ title2 }} {{ year_in_school }}</p>
+        <h4>{{ title }} {{ year_in_school }}</h4>
         <form method='POST' action=''>{% csrf_token %}
-        {{ form2 }}
-        {% if form2 %}
+        <!-- {{ form }} -->
+        <h5>Select Gym:</h5> {{ form.gym }} <br>
+        <h5>Select Time:</h5> {{ form.time }} 
+        <br>
+        <br>
+        {% if form %}
         <input class = 'btn btn-primary' type = 'submit' value = 'Send' />
         {% endif %}
         </form>

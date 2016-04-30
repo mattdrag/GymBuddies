@@ -62,8 +62,8 @@ INSTALLED_APPS = (
     #my apps
     'CeleryEmail',
     #third party
-    'djcelery',
-    'kombu.transport.django',
+    # 'djcelery',
+    # 'kombu.transport.django',
 
 )
 

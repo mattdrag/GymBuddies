@@ -1,6 +1,6 @@
 from django import forms
 from .models import SignUp
-from .models import Student
+from .models import FindBuddy
 
 
 class SignUpForm(forms.ModelForm):
@@ -22,9 +22,9 @@ class SignUpForm(forms.ModelForm):
 		#write validation code
 		return full_name
 
-class StudentForm(forms.ModelForm):
+class FindBuddyForm(forms.ModelForm):
 	class Meta:
-		model = Student
-		fields = ['year_in_school']
+		model = FindBuddy
+		fields = ['gym', 'time']
 		### exclude = ['full_name'] use sparingly
 
