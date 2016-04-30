@@ -45,14 +45,20 @@
         </div><!--/.container-fluid -->
       </nav>
     
-  	<div>
-		<div>
-        <h1>About GymBuddies</h1>
+    <div>
+    <div>
 
+        <p>{{ title2 }} {{ year_in_school }}</p>
+        <form method='POST' action=''>{% csrf_token %}
+        {{ form2 }}
+        {% if form2 %}
+        <input class = 'btn btn-primary' type = 'submit' value = 'Send' />
+        {% endif %}
+        </form>
 
-		</div>
+    </div>
 
-	</div>
+  </div>
 
   </body>
 </html>

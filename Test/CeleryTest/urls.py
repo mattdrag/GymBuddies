@@ -18,5 +18,8 @@ from django.contrib import admin
 
 urlpatterns = [
 	url(r'^$', "CeleryEmail.views.home", name='home'),
+	url(r'^home/', "CeleryEmail.views.home", name='home'),
+	url(r'^create/', "CeleryEmail.views.create", name='create'),
+	url(r'^find/', "CeleryEmail.views.find", name='find'),
     url(r'^admin/', include(admin.site.urls)),
 ]
