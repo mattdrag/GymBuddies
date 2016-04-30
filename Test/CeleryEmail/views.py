@@ -3,8 +3,9 @@ from django.conf import settings
 from django.core.mail import send_mail
 
 from .forms import SignUpForm
+from .forms import StudentForm
 from .models import SignUp
-from CeleryEmail.tasks import send
+from .models import Student
 from celery.schedules import crontab
 from datetime import timedelta
 
@@ -12,13 +13,17 @@ from datetime import timedelta
 def home(request):
 	title = 'Enter your info:'
 	form = SignUpForm(request.POST or None)
+	title2 = 'What year are you:'
+	form2 = Student(request.POST or None)
 
 	# if request.user.is_authenticated():
 	# 	title = "My Title %s" %(request.user)
 	
 	context = {
 		"title": title,
-		"form": form
+		"form": form,
+		"title2": title2,
+		"form2": form2,
 	}
 
 	if form.is_valid():
@@ -33,7 +38,6 @@ def home(request):
 			"title" : "Thank you",
 			"full_name": full_name,
 		}
-		send.delay(full_name)
 
 
 	# if request.user.is_authenticated() and request.user.is_staff:

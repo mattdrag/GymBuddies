@@ -23,6 +23,13 @@
 				<input class = 'btn btn-primary' type = 'submit' value = 'Send' />
         {% endif %}
 
+        <p>{{ title2 }} {{ year_in_school }}</p>
+        <form method='POST' action=''>{% csrf_token %}
+        {{ form2 }}
+        {% if form %}
+        <input class = 'btn btn-primary' type = 'submit' value = 'Send' />
+        {% endif %}
+
 				</form>
 		</div>
 
