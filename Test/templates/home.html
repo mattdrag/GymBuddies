@@ -1,6 +1,7 @@
+{% load staticfiles %}
 
-<!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,39 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
+    <title>Gym Buddies</title>
+
+    {% include 'css.html' %}
+    {% include 'javascript.html' %}
+    
   </head>
 
   <body>
+
+    <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Gym Buddies</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="find.html">Find a Buddy</a></li>
+              <li><a href="">Manage Account</a></li>
+              <li><a href="">Logout</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
     
   	<div>
 		<div>
@@ -22,15 +53,16 @@
         {% if form %}
 				<input class = 'btn btn-primary' type = 'submit' value = 'Send' />
         {% endif %}
+				</form>
 
         <p>{{ title2 }} {{ year_in_school }}</p>
         <form method='POST' action=''>{% csrf_token %}
         {{ form2 }}
-        {% if form %}
+        {% if form2 %}
         <input class = 'btn btn-primary' type = 'submit' value = 'Send' />
         {% endif %}
+        </form>
 
-				</form>
 		</div>
 
 	</div>

@@ -14,7 +14,7 @@ def home(request):
 	title = 'Enter your info:'
 	form = SignUpForm(request.POST or None)
 	title2 = 'What year are you:'
-	form2 = Student(request.POST or None)
+	form2 = StudentForm(request.POST or None)
 
 	# if request.user.is_authenticated():
 	# 	title = "My Title %s" %(request.user)
