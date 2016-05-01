@@ -1,11 +1,12 @@
 from django import forms
 
 from .models import SignUp
+from .models import FindBuddy
 
-class ContactForm(forms.Form):
-	full_name = forms.CharField(required=False)
-	email = forms.EmailField()
-	message = forms.CharField()
+class FindBuddyForm(forms.ModelForm):
+	class Meta:
+		model = FindBuddy
+		fields = ['gym', 'time']
 
 
 class SignUpForm(forms.ModelForm):

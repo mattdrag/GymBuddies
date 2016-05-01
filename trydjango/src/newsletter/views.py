@@ -2,8 +2,11 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 
-from .forms import ContactForm, SignUpForm
-from .models import SignUp
+from .forms import FindBuddyForm, SignUpForm
+from .models import SignUp, FindBuddy
+from django.contrib.auth.models import User
+
+import smtplib
 
 # Create your views here.
 def home(request):
@@ -29,7 +32,8 @@ def home(request):
 			"title": "Thank you"
 		}
 
-	if request.user.is_authenticated() and request.user.is_staff:
+	# if request.user.is_authenticated() and request.user.is_staff:
+	if request.user.is_authenticated():
 		#print(SignUp.objects.all())
 		# i = 1
 		# for instance in SignUp.objects.all():
@@ -37,50 +41,63 @@ def home(request):
 		# 	print(instance.full_name)
 		# 	i += 1
 
-		queryset = SignUp.objects.all().order_by('-timestamp') #.filter(full_name__iexact="Justin")
+		queryset = User.objects.all().order_by('-username') #.filter(full_name__iexact="Justin")
 		#print(SignUp.objects.all().order_by('-timestamp').filter(full_name__iexact="Justin").count())
 		context = {
 			"queryset": queryset
+
 		}
 
 	return render(request, "home.html", context)
 
 
 
-def contact(request):
-	title = 'Contact Us'
+def find(request):
+	# request.user.username  - get user name
+	title = "Find a Buddy"
 	title_align_center = True
-	form = ContactForm(request.POST or None)
+	form = FindBuddyForm(request.POST or None)
+
 	if form.is_valid():
-		# for key, value in form.cleaned_data.iteritems():
-		# 	print key, value
-		# 	#print form.cleaned_data.get(key)
-		form_email = form.cleaned_data.get("email")
-		form_message = form.cleaned_data.get("message")
-		form_full_name = form.cleaned_data.get("full_name")
-		# print email, message, full_name
-		subject = 'Site contact form'
-		from_email = settings.EMAIL_HOST_USER
-		to_email = [from_email, 'youotheremail@email.com']
-		contact_message = "%s: %s via %s"%( 
-				form_full_name, 
-				form_message, 
-				form_email)
-		some_html_message = """
-		<h1>hello</h1>
-		"""
-		send_mail(subject, 
-				contact_message, 
-				from_email, 
-				to_email, 
-				html_message=some_html_message,
-				fail_silently=True)
+		instance = form.save(commit=False)
+		instance.username = request.user.username
+		instance.email = request.user.email
+		instance.save()
+
+		# users = User.objects.all().order_by('-username')
+		# find = FindBuddy.objects.all().order_by('-time').order_by('-gym')
+		flag = 0
+		matches = FindBuddy.objects.all().filter(gym__exact=instance.gym).filter(time__exact=instance.time)
+		match = None
+
+		for item in matches:
+			if item.username!=request.user.username:
+				flag=1
+				match = item
+				server = smtplib.SMTP( "smtp.gmail.com", 587 ) 
+				server.starttls()
+				server.login( "bloodsucker32123@gmail.com", "Xcode2015" )
+				server.sendmail( "", item.email, "We found a match for you to go to " + str(item.gym) + " at " + str(item.time) + ". Your matches email is " + str(request.user.email))
+				server.quit()
+				break
+		
+
+
+		context = {
+			"title" : "Thank you",
+			"username": instance.username + '!',
+			# "users": users,
+			"item": item,
+			"flag": flag
+		}
+		return render(request, "forms.html", context)
 
 	context = {
 		"form": form,
 		"title": title,
 		"title_align_center": title_align_center,
 	}
+
 	return render(request, "forms.html", context)
 
 
