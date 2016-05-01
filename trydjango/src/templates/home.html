@@ -21,56 +21,33 @@
 {% endblock %}
 </style>
 
-
-{% block content %}
- {% if request.user.is_authenticated %}
-	{% if queryset %}
-	<h2>Welcome {{ request.user.username }}</h2>
-	{% endif %}
-
- {% else %}
-
-<!-- <div class="row">
-
-  <div class="col-sm-3 pull-right">
-  	
-			<p class='lead text-align-center'>{{ title }}</p>
-
-			<form method='POST' action=''>{% csrf_token %}
-			{{ form|crispy }}
-
-			<input class='btn btn-primary' type='submit' value='Sign Up' />
-
-			</form>
-	</div>
-
-</div>
- -->
-
-{% endif %}
-
-{% endblock %}
-
      
 {% block jumbotron %}
+
+
 
 <div class="jumbotron">
  <div class="container">
 	<div class="row">
 		<div class='col-sm-6'>
-		<h1 style="test-shadow: -1px 0 #337AB7, 0 1px #337AB7, 1px 0 #337AB7, 0 -1px #337AB7; color:#FFFFFF">Friends and Fitness</h1>
-		{% if request.user.is_authenticated %}
-		<p>
-		<a class="btn btn-lg btn-primary" href="find" role="button">Find a gym buddy &raquo;</a>
-		</p>
-		{% else %}
-		<p>
-		<a class="btn btn-lg btn-primary" href="accounts/register" role="button">Create an Account &raquo;</a>
-		</p>
-		{% endif %}
+		  <h1 style="text-shadow:-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; color:white">Friends and Fitness</h1>
+{% if request.user.is_authenticated %}
+		  {% if queryset %}
+		  <h2 style="text-shadow:-0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; color:white">Welcome {{ request.user.username }}</h2>
+		  {% endif %}
+		  {% endif %}
+		  {% if request.user.is_authenticated %}
+		  <p>
+		    <a class="btn btn-lg btn-primary" href="find" role="button">Find a gym buddy &raquo;</a>
+		  </p>
+		  {% else %}
+		  <p>
+		    <a class="btn btn-lg btn-primary" href="accounts/register" role="button">Create an Account &raquo;</a>
+		  </p>
+		  {% endif %}
 		</div>
 		<div class='col-sm-6' >
-			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2uLYO1LUf6Q" frameborder="0" allowfullscreen></iframe> -->
+		  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2uLYO1LUf6Q" frameborder="0" allowfullscreen></iframe> -->
 
  		</div>
 		</div>
