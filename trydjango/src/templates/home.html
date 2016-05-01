@@ -13,7 +13,9 @@
 
 .jumbotron {
 	background-color:#000;
-	color: #FFF;
+	color:#FFF;
+        background-image: url( {% static 'img/friends.jpg' %} );
+        height: 867px;
 }
 
 {% endblock %}
@@ -56,7 +58,7 @@
  <div class="container">
 	<div class="row">
 		<div class='col-sm-6'>
-		<h1>Friends and Fitness</h1>
+		<h1 style="test-shadow: -1px 0 #337AB7, 0 1px #337AB7, 1px 0 #337AB7, 0 -1px #337AB7; color:#FFFFFF">Friends and Fitness</h1>
 		{% if request.user.is_authenticated %}
 		<p>
 		<a class="btn btn-lg btn-primary" href="find" role="button">Find a gym buddy &raquo;</a>
