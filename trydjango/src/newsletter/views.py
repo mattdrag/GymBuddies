@@ -75,7 +75,7 @@ def find(request):
 				match = item
 				server = smtplib.SMTP( "smtp.gmail.com", 587 ) 
 				server.starttls()
-				server.login( "bloodsucker32123@gmail.com", "Xcode2015" )
+				server.login( "bloodsucker32123@gmail.com", "StrongPassword2016" )
 				server.sendmail( "", item.email, "We found a match for you to go to " + str(item.gym) + " at " + str(item.time) + ". Your matches email is " + str(request.user.email))
 				server.quit()
 				item.delete()

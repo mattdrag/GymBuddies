@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'bloodsucker32123@gmail.com'
-EMAIL_HOST_PASSWORD = 'Xcode2015'
+EMAIL_HOST_PASSWORD = 'StrongPassword2016'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

@@ -28,7 +28,7 @@ class FindBuddy(models.Model):
     TIME_CHOICES = []
     k = 0
     for val in arr:
-        TIME_CHOICES.append((str(k),val))
+        TIME_CHOICES.append((val ,val))
         k+=1
 
     arr = []
@@ -36,10 +36,10 @@ class FindBuddy(models.Model):
         for j in range(0,60,30):
             arr.append(str(i).zfill(2) + ":" + str(j).zfill(2)+ " PM") 
     for val in arr:
-        TIME_CHOICES.append((str(k),val))
+        TIME_CHOICES.append((val ,val))
         k+=1
 
-    time = models.CharField(max_length=2,
+    time = models.CharField(max_length=8,
                                       choices=TIME_CHOICES)
 
     username = models.CharField(max_length=120, blank=True, null=True)
