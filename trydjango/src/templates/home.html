@@ -12,7 +12,7 @@
 }
 
 .jumbotron {
-	background-color:#0E3D14;
+	background-color:#000;
 	color: #FFF;
 }
 
@@ -20,45 +20,10 @@
 </style>
 
 
-     
-{% block jumbotron %}
- {% if not request.user.is_authenticated %}
-
-<div class="jumbotron">
- <div class="container">
-	<div class="row">
-		<div class='col-sm-6'>
-		<h1>Gym Buddies</h1>
-		<p>Description</p>
-		<p>
-		<a class="btn btn-lg btn-primary" href="accounts/register" role="button">Create an Account &raquo;</a>
-		</p>
-		</div>
-		<div class='col-sm-6' >
-			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2uLYO1LUf6Q" frameborder="0" allowfullscreen></iframe> -->
-
- 		</div>
-		</div>
-	</div>
- </div>
- {% endif %}
-{% endblock %}
-
-
-
-
 {% block content %}
  {% if request.user.is_authenticated %}
-<h1>You are logged in!</h1>
-
 	{% if queryset %}
 	<h2>Welcome {{ request.user.username }}</h2>
-	<table class='table'>
-	{% for instance in queryset %}
-		<tr><td>{{ forloop.counter }}</td><td>{{ instance.username }}</td><td>{{ instance.email }}</td></tr>
-	{% endfor %}
-	</table>
-
 	{% endif %}
 
  {% else %}
@@ -82,4 +47,31 @@
 
 {% endif %}
 
+{% endblock %}
+
+     
+{% block jumbotron %}
+
+<div class="jumbotron">
+ <div class="container">
+	<div class="row">
+		<div class='col-sm-6'>
+		<h1>Friends and Fitness</h1>
+		{% if request.user.is_authenticated %}
+		<p>
+		<a class="btn btn-lg btn-primary" href="find" role="button">Find a gym buddy &raquo;</a>
+		</p>
+		{% else %}
+		<p>
+		<a class="btn btn-lg btn-primary" href="accounts/register" role="button">Create an Account &raquo;</a>
+		</p>
+		{% endif %}
+		</div>
+		<div class='col-sm-6' >
+			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2uLYO1LUf6Q" frameborder="0" allowfullscreen></iframe> -->
+
+ 		</div>
+		</div>
+	</div>
+ </div>
 {% endblock %}

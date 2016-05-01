@@ -62,8 +62,7 @@ def find(request):
 		instance = form.save(commit=False)
 		instance.username = request.user.username
 		instance.email = request.user.email
-		instance.save()
-
+                instance.save()
 		# users = User.objects.all().order_by('-username')
 		# find = FindBuddy.objects.all().order_by('-time').order_by('-gym')
 		flag = 0
@@ -79,8 +78,9 @@ def find(request):
 				server.login( "bloodsucker32123@gmail.com", "Xcode2015" )
 				server.sendmail( "", item.email, "We found a match for you to go to " + str(item.gym) + " at " + str(item.time) + ". Your matches email is " + str(request.user.email))
 				server.quit()
-				break
-		
+				item.delete()
+                                instance.delete()
+                                break
 
 
 		context = {
